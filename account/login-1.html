@@ -9,18 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <base href="https://vothianhnguyet22728801.github.io/BAITAPLON/">
-    <style>
-        .error-message {
-            color: red;
-            font-size: 0.8em;
-            margin-top: 5px;
-        }
-    </style>
+
 </head>
 
 <body>
     <header>
-        <!-- Previous header content remains the same -->
         <div class="align-items-center">
             <div class="container px-md-0 mt2">
                 <div class="row align-items-center">
@@ -86,19 +79,17 @@
                             <h4>Đăng nhập tài khoản</h4>
                         </div>
                         <div class="card-body">
-                            <form id="loginForm" class="card-log">
+                            <form id="authForm" class="card-log">
                                 <div class="mb-3">
-                                    <label for="email" class="form-label"><b>Email:</b></label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Nhập địa chỉ email" required>
-                                    <div id="emailError" class="error-message"></div>
+                                    <label for="username" class="form-label"><b>Username:</b></label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Tên đăng nhập" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label"><b>Password:</b></label>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu" required>
-                                    <div id="passwordError" class="error-message"></div>
                                 </div>
                                 <div class="mb-3">
-                                    <button type="button" onclick="validateLogin()" class="btn btn-primary pl-4 pr-4">Login</button>
+                                    <button type="button" onclick="login()" class="btn btn-primary pl-4 pr-4">Login</button>
                                 </div>
                             </form>
                         </div>
@@ -110,57 +101,83 @@
         <div class="padd"></div>
         <div class="padd"></div>
     </main>
-    <footer>
-        <!-- Previous footer content remains the same -->
+    <footer class="footer pt-4">
+        <div class="container">
+            <!-- Newsletter Subscription -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center">
+                    <h4>Đăng ký nhận thông tin khuyến mãi</h4>
+                    <br>
+                    <form class="contact-form m" action="/index.html" method="post">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control mr-3" placeholder="Nhập địa chỉ email"
+                                aria-label="Địa chỉ Email" required>
+                            <button class="btn btn-primary" type="submit">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Footer Links -->
+            <div class="row">
+                <!-- Customer Support -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4">Hỗ trợ khách hàng</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="" class="text-dark">Chính sách giao hàng</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Chính sách đổi trả </a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Chính sách thành viên</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Hướng dẫn mua hàng và hoàn tiền</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Giấy chứng nhận Vệ sinh ATTP</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4">Về Farmers Market</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="" class="text-dark">Giới thiệu</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Chính Sách Quyền Riêng Tư</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Thời gian: 7h30 - 22h30</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Hotline: 1800 69 30 (miễn phí cước)</a></li>
+                        <li class="mb-2"><a href="" class="text-dark">Các Cửa hàng Farmersmarket</a></li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4">Hệ thống cửa hàng</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">12 Nguyễn Văn Bảo, p4 ,Gò vấp</li>
+                        <li class="mb-2">12 Nguyễn Văn Bảo, p4 ,Gò vấp</li>
+                        <li class="mb-2">12 Nguyễn Văn Bảo, p4 ,Gò vấp</li>
+                        <li class="mb-2">12 Nguyễn Văn Bảo, p4 ,Gò vấp</li>
+                        <li class="mb-2">12 Nguyễn Văn Bảo, p4 ,Gò vấp</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4">Theo dỏi chúng tôi</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Facebook</li>
+                        <li class="mb-2">Instagram</li>
+                        <li class="mb-2">Farmers</li>
+                        <li class="mb-2">Twitter</li>
+                        <li class="mb-2">Google</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="text-center py-3 bg-dark text-white mt-4">
+            <small>Võ Thị Ánh Nguyệt - MSSV: 22728801</small>
+        </div>
     </footer>
-
-    <script>
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
-    }
-
-    function validatePassword(password) {
-        // At least 8 characters, one uppercase, one lowercase, one number
-        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-        return re.test(password);
-    }
-
-    function validateLogin() {
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const emailError = document.getElementById('emailError');
-        const passwordError = document.getElementById('passwordError');
-
-        // Reset previous error messages
-        emailError.textContent = '';
-        passwordError.textContent = '';
-
-        let isValid = true;
-
-        // Email validation
-        if (!validateEmail(emailInput.value)) {
-            emailError.textContent = 'Vui lòng nhập địa chỉ email hợp lệ.';
-            isValid = false;
-        }
-
-        // Password validation
-        if (!validatePassword(passwordInput.value)) {
-            passwordError.textContent = 'Mật khẩu phải có ít nhất 8 kí tự, bao gồm chữ in hoa, chữ thường và số.';
-            isValid = false;
-        }
-
-        if (isValid) {
-            // Here you would typically send the login request to your backend
-            alert('Đăng nhập thành công!');
-            // Example: login();
-        }
-    }
-    </script>
-
+    <script src="assets/javascripts/auth.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
-</html>
+</html> 
