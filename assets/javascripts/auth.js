@@ -33,7 +33,7 @@ function login() {
     if (storedUser && storedUser.username === username && storedUser.password === password) {
         alert("Đăng nhập thành công!");
         sessionStorage.setItem('username', username);
-        window.location.href = '/'; // Đảm bảo đường dẫn đúng
+        window.location.href = ''; // Đảm bảo đường dẫn đúng
     } else {
         alert("Sai thông tin đăng nhập!");
     }
