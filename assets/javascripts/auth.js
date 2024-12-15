@@ -4,6 +4,26 @@ function register() {
     const password = document.getElementById('password').value;
     const repassword = document.getElementById('repassword').value;
 
+    if(!email){
+        alert("Email không được để trống");
+        return;
+    }
+
+    if(!username){
+        alert("Username không được để trống");
+        return;
+    }
+
+    if(!password){
+        alert("password không được để trống");
+        return;
+    }
+
+    if(password.length < 8){
+        alert("Mật khẩu phải lớn hơn 8 ký tự");
+        return;
+    }
+
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if(!emailRegex.test(email)){
